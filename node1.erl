@@ -2,11 +2,11 @@
 
 -module(node1).
 -author("Ryan Flynn www.parseerror.com github.com/rflynn").
--export([run/0]).
+-export([start/0]).
 
 % wait to hear from node2, then register a global name
 
-run() ->
+start() ->
     io:format("~p waiting to hear from somebody...~n",
         [?MODULE]),
     io:format("~p ok, so I see ~p~n",

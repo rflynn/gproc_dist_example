@@ -6,13 +6,13 @@ gproc_dist_example: build compile
     	-noshell                                  \
     	-pa gproc/ebin gproc/deps/gen_leader/ebin \
     	-gproc gproc_dist all                     \
-    	-s node1 run &
+    	-s node1 &
 	# launch node 2 and wait for it to finish and kill both nodes
 	erl -name node2@127.0.0.1                     \
     	-noshell                                  \
     	-pa gproc/ebin gproc/deps/gen_leader/ebin \
     	-gproc gproc_dist all                     \
-    	-s node2 run 
+    	-s node2
 
 build:
 	[ -d gproc ] || git clone https://github.com/uwiger/gproc.git

@@ -2,11 +2,11 @@
 
 -module(node2).
 -author("Ryan Flynn www.parseerror.com github.com/rflynn").
--export([run/0]).
+-export([start/0]).
 
 % contact node1, then lookup a global name that node1 registers
 
-run() ->
+start() ->
     until(true, conn(), fun conn/0),
     io:format("~p I can see ~p~n",
         [?MODULE, nodes()]),
