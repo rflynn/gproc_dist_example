@@ -34,13 +34,13 @@ subsequent invocations should look like:
             -noshell                                  \
             -pa gproc/ebin gproc/deps/gen_leader/ebin \
             -gproc gproc_dist all                     \
-            -s node1 run &
+            -s node1 &
     # launch node 2 and wait for it to finish and kill both nodes
     erl -name node2@127.0.0.1                         \
             -noshell                                  \
             -pa gproc/ebin gproc/deps/gen_leader/ebin \
             -gproc gproc_dist all                     \
-            -s node2 run 
+            -s node2
     node1 waiting to hear from somebody...
     node1 ok, so I see ['node2@127.0.0.1']
     node2 I can see ['node1@127.0.0.1']
